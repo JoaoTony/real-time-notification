@@ -3,3 +3,7 @@ export interface NavbarProps {
   name: string;
   avatar: string
 }
+
+export interface INotification {
+  senderName: string, type: number
+}

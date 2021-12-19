@@ -31,13 +31,15 @@ export const Notifications = styled.div`
   width: 200px;
   padding: 12px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 
   background: #fff;
 
   position: absolute;
   z-index: 2000;
   right: 0;
-  bottom:  -35px;
+  top:  60px;
   box-shadow: #B0C4DE 0 0 19px;
 
   .arrow {
@@ -49,5 +51,12 @@ export const Notifications = styled.div`
     top: -8px;
     left: 53%;
     transform: rotate(45deg);
+  }
+
+  .notification{
+    margin: 0;
+    font-size: 14px;
+    color: #606060;
+    margin: 5px 0;
   }
 `

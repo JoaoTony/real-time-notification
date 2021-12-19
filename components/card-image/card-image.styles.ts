@@ -38,6 +38,7 @@ export const BTNLike = styled.button`
   width: 30px;
   height: 30px;
   background-color: transparent;
+  margin-left: 10px;
 
   img {
     width: 100%;

@@ -1,18 +1,15 @@
 import { FC } from 'react'
 
 import { Container, Icon, FloatNumber } from './notification.styles'
+import { NotificationsProps } from './notification.types'
 
-const Notification: FC<{ handleNotifications: () => void }> = ({ handleNotifications }) => {
-  const notification = 1
-
-  return (
-    <Container onClick={() => handleNotifications()}>
-      {notification && (
-        <FloatNumber>{notification}</FloatNumber>
-      )}
-      <Icon src="./icon-lembrete.png"/>
-    </Container>
-  )
-}
+const Notification: FC<NotificationsProps> = ({ handleNotifications, notificationQuality }) => (
+  <Container onClick={() => handleNotifications()}>
+    {notificationQuality > 0 && (
+      <FloatNumber>{notificationQuality}</FloatNumber>
+    )}
+    <Icon src="./icon-lembrete.png"/>
+  </Container>
+)
 
 export default Notification
